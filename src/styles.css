@@ -8,6 +8,7 @@
 .head{
   margin: 10px 5px;
   display: flex;
+  justify-content: center;
 }
 .dropdown {
   position: relative;
@@ -125,6 +126,7 @@ li a:hover {
   }
 }
 @media (min-width: 760px){
+  
   .postContainer{
     max-width: 760px;
     display: grid;
@@ -165,6 +167,9 @@ li a:hover {
 
 }
 @media (min-width: 1024px){
+  .title{
+    width: 1024px;
+  }
   .postContainer{
     max-width: 1024px;
     display: grid;
@@ -203,6 +208,60 @@ li a:hover {
     font-size: .7rem;
   }
 
+}
+
+/* postDetailsStyles */
+
+@media (min-width: 300px){
+  .detailsMainContainer{
+    padding: 5px;
+  }
+
+  .detailsTitle{
+    margin-top: 15px;
+    text-align: center;
+    font-size: .6rem;
+  }
+  .detailsDate{
+    text-align: center;
+    font-size: .8rem;
+  }
+  .detailsBodyContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .detailsImg{
+    border: 1px solid red;
+    height: 150px;
+    width: 100%;
+    max-width: 450px;
+  }
+  .detailsText{
+    
+    margin-top: 10px;
+    font-size: .9rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 450px;
+  }
+}
+@media (min-width: 760px){
+  .detailsTitle{
+    font-size: .7rem;
+  }
+  .detailsDate{
+    font-size: .9rem;
+  }
+  .detailsImg{
+    border: 1px solid red;
+    height: 250px;
+    width: 100%;
+    max-width: 700px;
+  }
+  .detailsText{
+    font-size: 1rem;
+    max-width: 700px;
+  }
 }
 
 
