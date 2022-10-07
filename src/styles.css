@@ -2,8 +2,11 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0px;
   padding: 0px;
+  font-size: 16px;
 }
+
 .head{
+  margin: 10px 5px;
   display: flex;
 }
 .dropdown {
@@ -20,7 +23,7 @@
 }
 .title{
   display: flex;
-  width: 70%;
+  width: 90%;
   justify-content: center;
 }
 h1{
@@ -49,5 +52,162 @@ li a:hover {
   background-color: #555;
   color: white;
 }
+.body{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+@media (min-width: 300px){
+
+  .post {
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+  }
+  .postTitleDesk{
+    display: none;
+  }
+  .postTitleMovil{
+    width: 100%;
+    line-height: 5px;
+    font-weight: bolder;
+    font-size: .8rem;
+    text-align: center;
+  }
+  .postImg{
+    border: 1px solid gray;
+  
+    margin: 5px 0px 5px 20px;
+    width: 80%;
+    height: 120px;
+  }
+  .postContent{
+    font-size: .7rem;
+  }
+
+}
+
+@media (min-width: 600px){
+
+  .post {
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+  }
+ .postImg{
+    border: 1px solid gray;
+    margin: 10px;
+    width: 350px;
+    height: 120px;
+  }
+
+  .postText{
+    padding: 5px;
+    width: 100%;
+  }
+  .postTitleMovil{
+   display: none;
+  }
+
+  .postTitleDesk{
+    display: inline;
+    width: 100%;
+    line-height: 5px;
+    font-weight: bolder;
+    font-size: .9rem;
+  }
+  .postContent{
+    font-size: .7rem;
+  }
+}
+@media (min-width: 760px){
+  .postContainer{
+    max-width: 760px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .post {
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+  }
+ .postImg{
+    border: 1px solid gray;
+    margin: 10px;
+    width: 350px;
+    height: 120px;
+  }
+
+  .postText{
+    padding: 5px;
+    width: 100%;
+  }
+  .postTitleMovil{
+   display: none;
+  }
+
+  .postTitleDesk{
+    display: inline;
+    width: 100%;
+    line-height: 5px;
+    font-weight: bolder;
+    font-size: .9rem;
+  }
+  .postContent{
+    font-size: .7rem;
+  }
+
+}
+@media (min-width: 1024px){
+  .postContainer{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .post {
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+  }
+ .postImg{
+    border: 1px solid gray;
+    margin: 10px;
+    width: 350px;
+    height: 120px;
+  }
+
+  .postText{
+    padding: 5px;
+    width: 100%;
+  }
+  .postTitleMovil{
+   display: none;
+  }
+
+  .postTitleDesk{
+    display: inline;
+    width: 100%;
+    line-height: 5px;
+    font-weight: bolder;
+    font-size: .9rem;
+  }
+  .postContent{
+    font-size: .7rem;
+  }
+
+}
+
+
+
+
+
 
 
