@@ -7,10 +7,8 @@ import { PostCard, Post } from "../components";
 
 export const PostList = () => {
 
-  getPosts()
   const{data, isLoading, error} = useQuery('getPosts', getPosts)
   
-
   if(isLoading){
     return <p>Loading...</p>
   }
@@ -36,8 +34,6 @@ export const PostList = () => {
                 )
               })
             }
-
-          
 
           </div>
         </div>
