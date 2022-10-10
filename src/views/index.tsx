@@ -1,3 +1,3 @@
 export * from './PostDetails'
-export * from './TitleMenu'
+export * from '../components/TitleMenu'
 export * from './PostList'

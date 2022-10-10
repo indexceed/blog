@@ -6,7 +6,7 @@ export const AppRouter = () => {
     <>
         <Routes>
             <Route path="/" element={<PostList />} />
-            <Route path="details" element={<PostDetails />} />
+            <Route path="/details" element={<PostDetails />} />
         </Routes>
     </>
   )
