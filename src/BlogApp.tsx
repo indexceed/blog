@@ -1,11 +1,8 @@
-
-import { Routes, Route, Link } from "react-router-dom";
 import { AppRouter } from "./router";
-import { TitleMenu } from "./views/TitleMenu";
+import { TitleMenu } from "./components";
 
 
 export const BlogApp = () => {
-
 
   return (
     <>
