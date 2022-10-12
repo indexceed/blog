@@ -5,35 +5,29 @@ import { Post } from '../../components';
 
 interface SliceState{
   postState: {
-    post: {
-      id: number,
-      title: string,
-      body: string,
+      post: Post
     }
-  }
+}
+
+interface PostState{
+      post: Post
 }
 
 const initialState = {
-    post: {
-    id: 0,
-    title: 'title',
-    body: 'content',
-    }
+    post: null
 }
 
 export const postSlice = createSlice({
   name: 'postState',
   initialState,
   reducers: {
-    setPost: (state, action: PayloadAction<any>) => {
-      console.log(action.payload)
+    setPost: (state: PostState, action: PayloadAction<any>) => {
       state.post = action.payload;
-      
     },
   },
 })
 
 export const { setPost } = postSlice.actions
-export const selectPost = (state:SliceState) => state.postState.post
+export const selectPost = (state: SliceState) => state.postState.post;
 
 export default postSlice.reducer
