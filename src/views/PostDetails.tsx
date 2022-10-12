@@ -1,6 +1,12 @@
-
+import type { RootState } from '../store/store'
+import { useSelector } from 'react-redux'
+import {selectPost} from '../store/slices/postSlice'
 
 export const PostDetails = () => {
+
+  
+  const post = useSelector(selectPost)
+  console.log(post)
 
   return (
     <>
@@ -8,10 +14,10 @@ export const PostDetails = () => {
 
         <div>
           <div className="detailsTitle">
-            <h1>Post Details Title</h1>
+            <h1>{post.title}</h1>
           </div>
           <div className="detailsDate">
-            <p>Date</p>
+            <p>{post.id}</p>
           </div>
         </div>
         
@@ -21,19 +27,7 @@ export const PostDetails = () => {
           </div>
           <div className="detailsText">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Nisi explicabo ab tenetur, atque, laboriosam consequatur 
-              aliquam quae asperiores perspiciatis maxime unde et facere 
-              possimus non recusandae sed optio animi illo!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Delectus ratione odio vitae repudiandae illo aspernatur et 
-              deleniti itaque eaque iusto quo, minima obcaecati, laborum 
-              rem possimus corporis libero error maxime.
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-              Veritatis doloribus harum optio, laboriosam dignissimos 
-              perspiciatis sapiente voluptatibus, quaerat fugit expedita 
-              laudantium, quibusdam consequuntur eaque deleniti adipisci 
-              incidunt magni quae rerum!
+             {post.body}
             </p>
           </div>
         </div>
