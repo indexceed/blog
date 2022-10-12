@@ -11,13 +11,14 @@ const persistConfig = {
   storage,
 }
 const rootReducer = combineReducers({
-  post:postReducer
+  postState: postReducer
 })
 
 const persitedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
   reducer: persitedReducer,
+  whitelist: ['postState'],
   middleware: [thunk]
 })
 
