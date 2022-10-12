@@ -1,17 +1,33 @@
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import { setPost } from '../store/slices/postSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import {selectPost} from '../store/slices/postSlice'
 
 export interface Post {
     id: number,
     title: string,
     body: string,
-
 }
 
+
+
 export const PostCard = (post:Post) => {
+
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const actualPost = useSelector(selectPost)
+
+    const actionClick = () => {
+        console.log(post)
+        dispatch(setPost(post))
+        navigate('/details')
+    }
     
   return (
-   
-        <Link className="post" to={'/details'}>
+        <a className="post"   
+              onClick={() => actionClick()}>
+
             <div className="postTitleMovil">
                 <p>{post.title}</p>
             </div>
@@ -28,6 +44,6 @@ export const PostCard = (post:Post) => {
                 <p>{post.body}</p>
             </div>
             </div>
-        </Link>
+        </a>
   )
 }
