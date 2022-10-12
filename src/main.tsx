@@ -28,7 +28,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         </QueryClientProvider>
      </PersistGate>
     </Provider>
-      
   </React.StrictMode>
 )
 

@@ -1,7 +1,9 @@
+
 import { useNavigate } from "react-router-dom"
 import { setPost } from '../store/slices/postSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import {selectPost} from '../store/slices/postSlice'
+
 
 export interface Post {
     id: number,
